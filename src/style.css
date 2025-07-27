@@ -1,0 +1,623 @@
+body {
+  background: #FAFDF2; 
+  font-family: 'Inter', Arial, sans-serif;
+  margin: 0;
+  color: #23342e;
+}
+/* Navbar */
+.navbar {
+  background: #1d3b2c;
+  color: #fff;
+  margin-bottom: 0;
+  width: 100vw;
+}
+
+.navbar__promo {
+  background: #234034;
+  color: #fff;
+  text-align: center;
+  font-size: 15px;
+  padding: 0;
+  width: 100vw;
+  min-height: 38px;
+  position: relative;
+  overflow: hidden;
+}
+
+.navbar__promo-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 6px 0 6px 0;
+  position: relative;
+  width: 100vw;
+}
+
+.navbar__promo-path {
+  display: inline-block;
+  height: 14px;
+  width: 100px;
+  min-width: 60px;
+}
+
+.navbar__promo-path--left {
+  margin-right: 10px;
+  margin-left: 0;
+}
+
+.navbar__promo-path--right {
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+.navbar__promo-ball {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin: 0 7px 0 4px;
+  vertical-align: middle;
+}
+
+.navbar__promo span {
+  display: inline-flex;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: 0.02em;
+}
+
+.footer__arrow {   /* класс для стрелки */
+  display: inline-block;
+  font-size: 1.09em;
+  background: #254433;
+  border-radius: 50%;
+  padding: 3px 9px 4px 9px;
+  margin-left: 10px;
+  vertical-align: middle;
+  color: #CBEA7B;
+  font-weight: 700;
+  transition: background 0.18s;
+}
+
+.navbar__burger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  margin-left: 10px;
+  z-index: 20;
+}
+
+.navbar__burger img {
+  display: block;
+  width: 32px;
+  height: 32px;
+}
+
+
+/* ------------------- Main Navbar ------------------- */
+.navbar__main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* распределяет лого слева, меню по центру, бургер справа */
+  padding: 16px 5%;
+  position: relative;
+}
+/* .navbar__logo — всегда слева */
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+}
+
+/* Скрыть бургер по умолчанию, показать только на мобилке */
+.navbar__burger {
+  display: none;
+  background: none;
+  border: none;
+  padding: 0 0 0 14px;
+  cursor: pointer;
+}
+
+.navbar__burger img {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+
+.navbar__logo img {
+  width: 38px;
+  height: 38px;
+}
+.navbar__links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+.navbar__links li { 
+  cursor: pointer; 
+  font-weight: 500;
+  font-size: 1.05em;
+  letter-spacing: 0.01em;
+  transition: color 0.18s;
+}
+.navbar__links li:hover {
+  color: #CBEA7B;
+}
+
+.navbar__cta {
+  background: #CBEA7B;
+  color: #19331c;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.18s, color 0.18s;
+}
+.navbar__cta:hover {
+  background: #E5F5BD;
+  color: #234034;
+}
+
+
+
+/* Hero Section */
+
+.hero {
+  display: flex;
+  width: 100vw;
+  max-width: 100vw;
+  margin: 0;
+  border-radius: 0 18px 18px 0;
+  overflow: hidden;
+  background: #FAFDF2;
+  min-height: 832px;
+  align-items: stretch;
+}
+
+.hero__img {
+  width: 50vw;                       /* всегда ровно половина секции */
+  min-width: 350px;                  /* не даём блоку стать слишком узким */
+  max-width: 50vw;
+  aspect-ratio: 1.13/1;              
+  background: #DCF1A7;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border-bottom-right-radius: 50px;
+  border-radius: 0 0 50px 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+
+.hero__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top left;
+  border-bottom-right-radius: 50px;
+  display: block;
+  background: transparent;
+  transition: height 0.2s;
+}
+
+
+.hero__content {
+  flex: 1;
+  min-width: 350px;
+  padding: 70px 54px 60px 54px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero__title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 8px 0 18px 0;
+}
+.hero__btns {
+  margin: 30px 0 12px 0;
+  display: flex; gap: 14px;
+}
+.hero__btn {
+ background: #CBEA7B;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 26px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.hero__btn--outline {
+  background: #F6FBE9;
+  border: 1px solid #E5F5BD;
+  color: #225c27;
+}
+
+.hero__customers {
+  display: flex;
+  align-items: center;
+}
+
+.hero__customers img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.hero__customers img:not(:first-child) {
+  margin-left: -10px;  
+}  
+
+
+
+/* Features Section */
+
+.features-section {
+  max-width: 1200px;
+  margin: 60px auto 0;
+  padding: 0 16px;
+  text-align: center;
+}
+
+.features__title {
+  font-size: 2.1rem;
+  font-weight: bold;
+  color: #23342e;
+  margin-bottom: 8px;
+  margin-top: 0;
+  letter-spacing: 0.5px;
+}
+
+.features__desc {
+  color: #888;
+  font-size: 1rem;
+  margin-bottom: 36px;
+  margin-top: 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.features-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px 28px;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.feature-card {
+  display: flex;
+  background: #F6FBE9;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px #e0f8e1;
+  align-items: flex-start;
+  padding: 26px 24px;
+  gap: 22px;
+  min-width: 270px;
+  text-align: left;
+  border: 1px solid #E5F5BD;
+  transition: box-shadow 0.18s;
+}
+
+.feature-card:hover {
+  box-shadow: 0 4px 22px #cbe7d1;
+}
+
+.feature-card__icon {
+  flex-shrink: 0;
+  width: 45px;           
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin-top: 6px;      /* небольшой отступ сверху для выравнивания по макету */
+}
+
+.feature-card__icon img {
+  width: 45px;
+  height: 45px;
+  display: block;
+}
+
+.feature-card__body {
+  flex: 1;
+}
+
+.feature-card__title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 0 0 13px 0;
+  color: #23342e;
+  line-height: 1.2;
+}
+
+.feature-card__desc {
+  margin: 0;
+  color: #444;
+  font-size: 1.08rem;
+  line-height: 1.55;
+}
+
+
+
+/* Calorie Calculator */
+.calorie-calc h2,
+.calorie-calc p {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.calorie-calc h2 {
+  line-height: 1.2;
+}
+
+.calorie-calc__inputs-bg {
+  background: #F6FBE9;  
+  border-radius: 10px;
+  padding: 35px 25px 30px 25px;
+  margin: 35px auto 0 auto;
+  max-width: 900px;
+  box-shadow: 0 2px 14px #eafbe7;
+  border: 1px solid #E5F5BD; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.calorie-calc__inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.calorie-calc__row {
+  display: flex;
+  gap: 20px;
+}
+.calorie-calc__row > div {
+  flex: 1 1 0;
+  min-width: 180px;
+}
+
+.calorie-calc__gender-row {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin: 22px 0 0 0;
+  font-size: 1.05rem;
+}
+
+.calorie-calc__inputs input {
+  border-radius: 6px;
+  border: 1px solid #cbeacb;
+  padding: 7px 13px;
+  margin-top: 5px;
+  width: 100%;
+  background: #fff;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.calorie-calc__gender {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.calorie-calc__gender span {
+  font-weight: 500;
+  margin-right: 12px;
+  color: #23342e;
+}
+
+.calorie-calc__btn {
+  background: #CBEA7B; 
+  border: none;
+  border-radius: 8px;
+  padding: 12px 38px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: 22px;
+  cursor: pointer;
+  transition: background 0.18s;
+}
+
+.calorie-calc__btn:hover {
+  background: #a4da5c;
+}
+
+.calorie-calc__form-block {
+  background: #f7fefb;
+  border-radius: 18px;
+  padding: 32px 26px 24px 26px;
+  max-width: 900px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  margin-top: 30px;
+}
+
+.calorie-calc__result {
+  margin-top: 36px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.calorie-calc__result table {
+  background: #fff;
+  border-radius: 7px;
+  border: 1px solid #d7e8c7;
+  box-shadow: 0 2px 8px #f3f7ee77;
+  overflow: hidden;
+  margin: 0 auto;
+  min-width: 340px;
+  font-size: 1rem;
+}
+
+.calorie-calc__result th,
+.calorie-calc__result td {
+  border: none;
+  padding: 10px 18px;
+  text-align: left;
+  color: #23342e;
+}
+
+.calorie-calc__result th {
+  font-weight: bold;
+  text-align: right;
+}
+
+.calorie-calc__result tr:not(:last-child) td {
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.calorie-calc__inputs select {
+  border-radius: 6px;
+  border: 1px solid #cbeacb;
+  padding: 7px 13px;
+  margin-top: 5px;
+  width: 100%;
+  background: #fff;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border 0.15s;
+}
+
+.calorie-calc__inputs select:focus {
+  border-color: #b8e96f;
+  outline: none;
+}
+
+
+/* Footer */
+.footer {
+  background: #183328;
+  color: #fff;
+  padding: 0;
+  margin-top: 40px;
+}
+
+.footer__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 34px 5vw 24px 5vw;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.18rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.footer__logo img {
+  width: 38px;
+  height: 38px;
+}
+
+.footer__menu {
+  display: flex;
+  gap: 26px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.footer__menu li {
+  cursor: pointer;
+  transition: color 0.15s;
+}
+
+.footer__menu li:hover {
+  color: #b8e96f;
+}
+
+.footer__top-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.footer__arrow {
+  display: inline-block;
+  font-size: 1.22em;
+  background: #254433;
+  border-radius: 50%;
+  padding: 4px 8px;
+  margin-left: 2px;
+}
+
+.footer__bottom {
+  margin: 0 auto 0 auto;
+  max-width: 1400px;
+  padding: 18px 5vw 30px 5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #234034;
+  border-radius: 7px;
+}
+
+.footer__contacts {
+  display: flex;
+  gap: 16px;
+}
+
+.footer__contact {
+  display: flex;
+  align-items: center;
+  background: #234034;
+  border: 1px solid #32604e;
+  border-radius: 7px;
+  padding: 9px 16px;
+  font-size: 1.05rem;
+  color: #fff;
+  min-width: 210px;
+  margin-right: 7px;
+}
+
+.footer__contact img {
+  width: 22px;
+  height: 22px;
+  margin-right: 10px;
+}
+
+.footer__copyright {
+  color: #fff;
+  opacity: 0.82;
+  font-size: 1rem;
+}
+
+

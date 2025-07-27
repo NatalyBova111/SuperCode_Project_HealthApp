@@ -1,0 +1,22 @@
+/* --------- Tablet (max-width: 1024px) --------- */
+@media (max-width: 1024px) {
+  .hero {
+    min-height: 420px;
+    border-radius: 0;
+  }
+  .hero__img {
+    width: 42vw;
+    min-width: 170px;
+    max-width: 420px;
+    aspect-ratio: 1.05/1; /* чуть менее квадратное */
+    border-radius: 0 0 40px 0;
+  }
+  .hero__img img {
+    border-radius: 0 0 40px 0;
+    object-position: top left;
+  }
+  .hero__content {
+    padding: 36px 14px 24px 20px;
+    min-width: 0;
+  }
+}
